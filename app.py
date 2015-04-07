@@ -18,7 +18,6 @@ redis_client = redis.from_url(redis_url)
 APP_KEY = os.environ['APP_KEY']
 APP_SECRET = os.environ['APP_SECRET']
 
-
 app = Flask(__name__)
  
 # A random secret used by Flask to encrypt session data cookies
@@ -81,7 +80,7 @@ def process_user(uid):
         for path, metadata in result['entries']:
             filename, fileext = os.path.splitext(path)
             # Ignore deleted files, folders, and non-python files
-            if (metadata is None or metadata['is_dir'] or fileext != '.py'):
+            if (metadata is None or metadata['is_dir'] or fileext != '.py' or '-disappointed' not in filename):
                 continue
 
             with client.get_file(path) as fin:
