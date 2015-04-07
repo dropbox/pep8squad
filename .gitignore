@@ -1,0 +1,5 @@
+dump.rdb
+venv
+*.pyc
+staticfiles
+.env

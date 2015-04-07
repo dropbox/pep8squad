@@ -1,0 +1,4 @@
+Flask==0.10.1
+dropbox==2.2.0
+gunicorn==19.2.1
+redis==2.10.3
