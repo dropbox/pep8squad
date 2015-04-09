@@ -19,6 +19,7 @@ APP_KEY = os.environ['APP_KEY']
 APP_SECRET = os.environ['APP_SECRET']
 
 app = Flask(__name__)
+app.config['DEBUG'] = os.environ['DEBUG'] == 'True'
  
 # A random secret used by Flask to encrypt session data cookies
 app.secret_key = os.environ['FLASK_SECRET_KEY']
