@@ -81,7 +81,7 @@ def process_user(uid):
         for path, metadata in result['entries']:
             filename, fileext = os.path.splitext(path)
             # Ignore deleted files, folders, and non-python files
-            if (metadata is None or metadata['is_dir'] or fileext != '.py' or '-disappointed' in filename):
+            if (metadata is None or metadata['is_dir'] or fileext != '.py' or '-disappointed' in filename or '-reformed' in filename):
                 continue
 
             with client.get_file(path) as fin:
