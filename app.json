@@ -15,6 +15,9 @@
     "APP_SECRET": {
       "description": "Your Dropbox app secret (found at dropbox.com/developers/apps)"
     },
+    "DEBUG": {
+      "description": "Boolean value to declare whether debuging is on or not. (True, or False)"
+    },
     "FLASK_SECRET_KEY": {
       "description": "A secret key for cookie signing",
       "generator": "secret"
